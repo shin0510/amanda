@@ -1,6 +1,10 @@
-// マウスストーカー要素
-var mouseStalker
-
+var windowWidth = $(window).width();
+var windowSm = 540;
+if (windowWidth <= windowSm) {
+   
+  // マウスストーカー要素
+  var mouseStalker
+  
 // マウスストーカー要素の位置
 var stalker = {
   x: 0,
@@ -23,7 +27,7 @@ document.addEventListener('mousemove', mousemove)
 function setup() {
   // マウスストーカー要素を取得
   mouseStalker = document.querySelector('.mouse-stalker')
-
+  
   // 更新処理を開始
   update()
 }
@@ -39,14 +43,14 @@ function update() {
   // マウスストーカー要素の位置を更新
   stalker.x += (mouse.x - stalker.x) * 0.1
   stalker.y += (mouse.y - stalker.y) * 0.1
-
+  
   // マウスストーカーの位置を小数点第一位まで四捨五入
   var x = Math.round(stalker.x * 10) / 10
   var y = Math.round(stalker.y * 10) / 10
-
+  
   // マウスストーカー要素のスタイルを更新
   mouseStalker.style.transform = `translate3d(` + x + 'px,' + y + 'px, 0)'
-
+  
   // ループ
   requestAnimationFrame(update)
 }
@@ -54,13 +58,16 @@ var cursor = document.getElementById('cursor');
 // リンクにホバーした時にクラス追加、離れたらクラス削除
 var link = document.querySelectorAll('a');
 for (var i = 0; i < link.length; i++) {
-    link[i].addEventListener('mouseover', function (e) {
-        cursor.classList.add('cursor--hover');
-    });
-    link[i].addEventListener('mouseout', function (e) {
-        cursor.classList.remove('cursor--hover');   
-    });
+  link[i].addEventListener('mouseover', function (e) {
+    cursor.classList.add('cursor--hover');
+  });
+  link[i].addEventListener('mouseout', function (e) {
+    cursor.classList.remove('cursor--hover');   
+  });
 }
+}
+
+
 //テキストのカウントアップの設定
 var bar = new ProgressBar.Line(splash_text, {//id名を指定
 	strokeWidth: 0,//進捗ゲージの太さ

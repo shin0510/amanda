@@ -1,3 +1,6 @@
+html.active,body.active{
+  overflow: hidden
+}
 html { scroll-behavior: smooth;}
 .pc{
   display: block;
@@ -17,7 +20,7 @@ body{
 /* Loading背景画面設定　*/
 #splash {
 	position: fixed;
-	z-index: 999;
+	z-index: 1999;
 	width: 100%;
 	height: 100%;
 	background:#333;
@@ -25,12 +28,13 @@ body{
 	color:#fff;
 }
 
- 
-/*デフォルトのマウスカーソルを非表示にする*/
-html,
-body,
-a {
-  cursor: none;
+ @media(min-width:540px){
+
+   /*デフォルトのマウスカーソルを非表示にする*/
+   html,
+   body,
+   a {
+     cursor: none;
 }
 
 
@@ -65,6 +69,7 @@ a {
   border-radius: 50%;
   background: rgba(255, 0, 0, 0.7);
   flex-shrink: 0;
+}
 }
 ::selection {
   background: #000;

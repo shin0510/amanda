@@ -112,6 +112,8 @@ header h2.scroll{
   display: none;
 }
 header h2.scroll.on{
+  font-weight: 700;
+  font-style: italic;
   position: fixed;
   font-size: 64px;
   left: 5%;
@@ -271,7 +273,7 @@ header nav ul li a{
     color: #fff;
     
     text-align: center;
-    width: 70%;
+    /* width: 70%; */
     opacity: 0;
     transition: opacity .6s ease, visibility .6s ease;
     pointer-events: none;
@@ -280,15 +282,16 @@ header nav ul li a{
   nav.globalMenuSp ul {
     margin: 60px 0 0 auto;
     padding: 0;
-    width: 70%;
+    /* width: 70%; */
     
   }
   
   nav.globalMenuSp ul li {
     list-style-type: none;
-    padding: 10% 0;
+    padding: 5% 0;
     transition: .4s all;
     font-size: 30px;
+    text-align: right;
   }
   nav.globalMenuSp ul li:hover{
     background :#ddd;
@@ -345,9 +348,8 @@ header nav ul li a{
 }
 .top p{
   font-size: 30px;
-  margin-top: 54%;
+  margin-top: 104%;
   letter-spacing: -1px;
-  line-height: 70px;
 }
 /* concept ::::::::::::::::::::::::::::::::::::::::*/
 .title{

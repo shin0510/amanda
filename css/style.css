@@ -34,11 +34,8 @@ body{
   transform: translate(-50%,-200%);
   font-size: 2rem;
 }
-#splash h4{
-  position: absolute;
-  left: 60%;
-  top: 50%;
-  transform: translateY(-45%);
+#splash_text span{
+ font-size: 1rem;
 }
 
  @media(min-width:540px){

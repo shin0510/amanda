@@ -87,7 +87,7 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 		autoStyleContainer: false //自動付与のスタイルを切る
 	},
 	step: function(state, bar) {
-		bar.setText(Math.round(bar.value() * 100) ); //テキストの数値
+		bar.setText(Math.round(bar.value() * 100) +"<span>%</span>"); //テキストの数値
 	}
 });
 

@@ -1,6 +1,6 @@
-var windowWidth = $(window).width();
-var windowSm = 540;
-if (windowWidth <= windowSm) {
+// var windowWidth = $(window).width();
+// var windowSm = 540;
+// if (windowWidth <= windowSm) {
    
   // マウスストーカー要素
   var mouseStalker
@@ -65,7 +65,7 @@ for (var i = 0; i < link.length; i++) {
     cursor.classList.remove('cursor--hover');   
   });
 }
-}
+
 
 
 //テキストのカウントアップの設定
@@ -81,13 +81,13 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 			padding:'0',
 			margin:'0',
 			transform:'translate(-50%,-50%)',
-			'font-size':'1.2rem',
+			'font-size':'2rem',
 			color:'#fff',
 		},
 		autoStyleContainer: false //自動付与のスタイルを切る
 	},
 	step: function(state, bar) {
-		bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
+		bar.setText(Math.round(bar.value() * 100) ); //テキストの数値
 	}
 });
 
@@ -95,3 +95,4 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
 	$("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
 });  
+

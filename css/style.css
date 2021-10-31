@@ -27,6 +27,19 @@ body{
 	text-align:center;
 	color:#fff;
 }
+#splash h3{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-200%);
+  font-size: 2rem;
+}
+#splash h4{
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transform: translateY(-45%);
+}
 
  @media(min-width:540px){
 
@@ -91,12 +104,28 @@ header.wrapper{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 150px;
 }
 header h1{
   font-weight: 700;
   font-style: italic;
   font-size: 114px;
+}
+header h2.scroll{
+  display: none;
+}
+header h2.scroll.on{
+  position: fixed;
+  font-size: 64px;
+  left: 5%;
+  top: 60px;
+  z-index: 500;
+  display: block;
+}
+header nav.pc{
+  position: fixed;
+  top: 60px;
+  right: 20px;
 }
 header nav.pc ul li{
   font-weight: 700;
@@ -104,7 +133,7 @@ header nav.pc ul li{
   line-height: 81px;
   text-align: right;
 }
-header nav.pc ul li a{
+header nav ul li a{
   border-bottom: #fff 3px solid;
 }
 /* top :::::::::::::::::::::::::::::::::::::::*/
@@ -190,13 +219,14 @@ header nav.pc ul li a{
   }
   /* ハンバーガー */
   .openbtn2{
-    position: absolute;
+    position: fixed;
     width: 40px;
     height:40px;
-    background:#cccccc;
+    background:none;
     top: 1%;
     right: 3%;
     z-index: 1001;
+    transition: all .4s;/*アニメーションの設定*/
   }
     
   /*ボタン内側*/
@@ -222,10 +252,7 @@ header nav.pc ul li a{
   }
   
   /*activeクラスが付与されると線が回転して×に*/
-  .openbtn2.active{
-    background-color: #000;
-    
-  }
+  
   .openbtn2.active span:nth-of-type(1) {
       top: 20px;
       left: 0px;
@@ -245,7 +272,7 @@ header nav.pc ul li a{
     top  : 0;
     right : 0;
     color: #fff;
-    background: rgba(0,0,0,1);
+    
     text-align: center;
     width: 70%;
     opacity: 0;
@@ -254,9 +281,9 @@ header nav.pc ul li a{
   }
   
   nav.globalMenuSp ul {
-    margin: 60px auto 0;
+    margin: 60px 0 0 auto;
     padding: 0;
-    width: 80%;
+    width: 70%;
     
   }
   
@@ -264,7 +291,7 @@ header nav.pc ul li a{
     list-style-type: none;
     padding: 10% 0;
     transition: .4s all;
-    font-size: 40px;
+    font-size: 30px;
   }
   nav.globalMenuSp ul li:hover{
     background :#ddd;
@@ -286,35 +313,48 @@ header nav.pc ul li a{
   .wrapper{
     padding: 0 3%;
   }
-  /* header.wrapper{
-    padding-top: 20px;
-  } */
+  header.wrapper{
+    padding-top: 80px;
+  }
+
   header h1{
     font-weight: 700;
     font-style: italic;
-    font-size: 50px;
+    font-size: 30px;
+  }
+  header h2.scroll{
+    display: none;
+  }
+  header h2.scroll.on{
+    position: fixed;
+    font-size: 20px;
+    left: 5%;
+    top: 3%;
+    z-index: 500;
+    display: block;
   }
 /* top */
 .top h3{
   width: 33%;
-  top: 70px;
+  top: 120px;
   left: 66%;
   z-index: -1;
 }
 .top h4{
   width: 45%;
   left: 40.8%;
-  top: 135px;
+  top: 185px;
   z-index: -2;
 }
 .top p{
-  font-size: 50px;
-  margin-top: 24%;
+  font-size: 30px;
+  margin-top: 54%;
   letter-spacing: -1px;
+  line-height: 70px;
 }
 /* concept ::::::::::::::::::::::::::::::::::::::::*/
 .title{
-  font-size: 50px;
+  font-size: 30px;
   letter-spacing: -1px;
 }
 #concept {
@@ -322,6 +362,9 @@ header nav.pc ul li a{
 }
 #concept h2{
   margin-top: .4em;
+}
+#concept .title{
+  margin-top: 23%;
 }
 
 }

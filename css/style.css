@@ -53,8 +53,8 @@ body {
 
 @media(min-width:540px) {
 
-  /*デフォルトのマウスカーソルを非表示にする*/
-  html,
+  デフォルトのマウスカーソルを非表示にする*/
+  /* html,
   body,
   a {
     cursor: none;
@@ -205,12 +205,49 @@ p {
   letter-spacing: -6px;
 }
 
-/* footer ::::::::::::::::::::::::::::::::::::::::*/
-footer {
-  position: relative;
+/* menu ::::::::::::::::::::::::::::::::::::::::*/
+
+#menu .menu-content h5{
+  font-size: 36px;
+}
+#menu .menu-content{
+  margin-top: 80px;
+}
+#menu .menu-content p{
+  font-size: 21px;
+  letter-spacing: 0;
+  font-family: 'Noto Sans JP',
+  sans-serif;
+  margin-top: 30px;
+}
+#menu .menu-content dl{
+  font-size: 21px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+#menu .menu-content dt{
+  width: 50%;
+  text-align: left;
+  font-family: 'Noto Sans JP',
+  sans-serif;
+  margin-top: 30px;
+}
+#menu .menu-content dd{
+  width: 50%;
+  text-align: right;
+  margin-top: 30px;
 }
 
-footer a {
+
+/* footer ::::::::::::::::::::::::::::::::::::::::*/
+
+footer {
+  position: relative;
+  padding-top: 20% !important;
+}
+
+footer>a {
   position: fixed;
   right: 1%;
   bottom: 2%;
@@ -218,6 +255,10 @@ footer a {
   color: #b4ffe9;
   border-bottom: #b4ffe9 3px solid;
   letter-spacing: -2px;
+}
+footer div a{
+  font-size: 106px;
+  
 }
 
 
@@ -406,8 +447,39 @@ footer a {
     margin-top: 23%;
   }
 
+  /* menu ::::::::::::::::::::::::::::::::::::::::*/
+  #menu .menu-content h5 {
+    font-size: 30px;
+  }
+
+  #menu .menu-content {
+    margin-top: 80px;
+  }
+
+  #menu .menu-content p {
+    font-size: 17px;
+    letter-spacing: 0;
+    font-family: 'Noto Sans JP',
+      sans-serif;
+    margin: 20px 0 10px;
+  }
+
+  #menu .menu-content dl {
+    font-size: 17px;
+  }
+
+  #menu .menu-content dt {
+    width: 50%;
+    margin-top: 15px;
+  }
+
+  #menu .menu-content dd {
+    width: 50%;
+    text-align: right;
+    margin-top: 15px;
+  }
   /* footer ::::::::::::::::::::::::::::::::::::::::*/
-  footer a {
+  footer>a {
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
@@ -415,6 +487,11 @@ footer a {
     display: inline-block;
     width: 200px;
 
+  }
+  footer div a{
+    font-size: 30px;
+    display: block;
+    margin-bottom: 10px;
   }
 }
 
@@ -432,7 +509,7 @@ p.ja {
 
 @media(max-width:500px) {
   p.ja {
-    font-size: 30px;
+    font-size: 16px;
   }
 }
 
@@ -465,6 +542,7 @@ p.ja {
 #reserved,
 #recruit {
   position: relative;
+  
 }
 
 #menu .decolation {
@@ -496,12 +574,10 @@ p.ja {
   left: 40.8%;
   top: 235px;
 }
-
-body,
-html {
+html,body{
   overflow-x: hidden;
-
 }
+
 
 @media(max-width:500px) {
   .decolation {
@@ -561,14 +637,14 @@ html {
 
 }
 
-.blue-link:hover {
+.blue-link {
   color: blue;
 }
 
-.light-link:hover {
+.light-link {
   background: linear-gradient(transparent 40%, yellow 40%)
 }
 
-.under-link:hover {
+.under-link{
   border-bottom: 3px solid #000;
 }

@@ -258,7 +258,7 @@ footer>a {
 }
 footer div a{
   font-size: 106px;
-  
+  display: block;
 }
 
 
@@ -542,7 +542,7 @@ p.ja {
 #reserved,
 #recruit {
   position: relative;
-  
+
 }
 
 #menu .decolation {
@@ -576,7 +576,13 @@ p.ja {
 }
 html,body{
   overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+html::-webkit-scrollbar,body::-webkit-scrollbar {
+  display: none;
+}
+
 
 
 @media(max-width:500px) {
